@@ -1,6 +1,17 @@
 # Design & Destiny — Advertising Strategy
 
-**Goal:** Drive paid Skool community memberships for Design & Destiny (Taksa Astrology + Behavioral Feng Shui) using destiny.ac as the conversion hub.
+**Goal:** Drive paid Skool community memberships ($37/mo, 7-day free trial) for Design & Destiny (Taksa Astrology + Behavioral Feng Shui) using destiny.ac as the conversion hub.
+
+## 0. The offer: $37/mo with a gated 7-day free trial
+
+The front-end offer for all paid traffic is **"Join free for 7 days"** — a far easier cold-traffic ask than "$37/month."
+
+**Content gating (native Skool features, no workarounds needed):**
+- Free/starter classes: drip-unlocked at **day 0** of enrollment — trial members get real value immediately.
+- Main class content: drip-unlocked at **day 8+** (and/or locked to the paid tier) — the core curriculum only ever opens for members who convert past the trial.
+- This makes the trial a genuine preview, keeps the paid curriculum as the conversion carrot, and means the day-5/6 trial-ending emails have something concrete to point at ("your main curriculum unlocks in 2 days — stay on").
+
+**Unit economics:** at $37/mo and an assumed 3–4 month average retention, member LTV ≈ $110–150. Target blended cost per paid member: **≤ $50**, hard ceiling ~$70. Trial→paid conversion rate is the single most important number in the whole system — at a typical 40–60% trial conversion, allowable cost per *trial start* is ~$20–35.
 
 ---
 
@@ -19,10 +30,14 @@ Personalized results page + email capture ("get your full reading")
         ↓
 Email nurture (3–5 sends) + retargeting ads
         ↓
-Skool community join (free tier or trial → paid membership)
+Skool 7-day free trial → $37/mo membership
 ```
 
 Everything in this document feeds the top of that funnel. The diagnostic is the conversion event we optimize ads against — not the membership purchase (too far down-funnel for the algorithm to learn on early budgets).
+
+**Secondary funnel — direct-to-Skool:** Skool's native Meta pixel plugin fires events for About-page views, membership requests, trial starts, and purchases, so ads can also point straight at the Skool About page with honest tracking. Use a *dedicated* pixel ID for the Skool group (separate from the destiny.ac pixel — reusing one ID across domains corrupts attribution). Jobs for this funnel:
+- **Retargeting (main use):** quiz completers, video viewers, and email custom audiences → "Join free for 7 days" → Skool About page.
+- **Cold test cell (small):** $10–15/day optimized to Skool's trial-start event, to benchmark against the quiz funnel.
 
 ## 2. On Higgsfield for UGC ads — verdict: yes, as the volume engine, not the whole strategy
 
@@ -90,16 +105,17 @@ Instrument the Meta Pixel + Conversions API on destiny.ac with this event ladder
 | QuizStart | Diagnostic begun | — |
 | QuizComplete | Results shown | $1.50–4.00 per completion |
 | Lead | Email captured | $4–10 |
-| JoinCommunity | Skool free join / trial | $15–40 |
-| Purchase | Paid membership | ≤ 1 month of membership LTV |
+| StartTrial | Skool 7-day trial begun (Skool pixel) | $20–35 |
+| Purchase | Trial converts to $37/mo paid | ≤ $50 blended, ceiling ~$70 |
 
-Optimize campaigns to QuizComplete until Purchase volume exceeds ~30/month, then move optimization down-funnel. The number that decides whether to scale is **cost per paid member vs. average member lifetime value** — measure LTV from Skool retention data starting now.
+Optimize campaigns to QuizComplete until Purchase volume exceeds ~30/month, then move optimization down-funnel. Watch two ratios weekly: **trial→paid conversion** (target 40%+; if it sags, the free-class drip content or trial-ending email sequence is the problem, not the ads) and **cost per paid member vs. LTV** (~$110–150 at 3–4 month retention) — that ratio decides whether to scale. Measure real retention from Skool data starting month one.
 
 ## 8. Immediate action items
 
 1. **Add a payment method to the Meta ad account** (`2797032890629290`) — it's active and API-enabled but cannot spend yet.
-2. Install Pixel + CAPI on destiny.ac and fire the §7 events.
-3. Build the email capture step on the diagnostic results page if it isn't there.
-4. Generate the first Higgsfield test batch: 12 variants across the four §3 angles; pressure-test avatar talking-head quality before scaling the pipeline.
-5. Connect TikTok/IG/YT accounts in Postiz for the organic repurposing loop.
-6. Film one founder credibility video (Gut & Non, the university-study story) for the retargeting layer.
+2. Install Pixel + CAPI on destiny.ac and fire the §7 events; install Skool's Meta pixel plugin with a **separate** pixel ID for the group.
+3. Configure the Skool offer: 7-day free trial on the $37/mo plan; drip free classes at day 0 and main class content at day 8+ so the core curriculum only unlocks after trial conversion. Write the day-5/6 trial-ending email pointing at the locked curriculum.
+4. Build the email capture step on the diagnostic results page if it isn't there.
+5. Generate the first Higgsfield test batch: 12 variants across the four §3 angles; pressure-test avatar talking-head quality before scaling the pipeline.
+6. Connect TikTok/IG/YT accounts in Postiz for the organic repurposing loop.
+7. Film one founder credibility video (Gut & Non, the university-study story) for the retargeting layer.
