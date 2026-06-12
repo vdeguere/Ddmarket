@@ -67,7 +67,7 @@ $37/mo Skool members. Items marked ✅ already exist; ⬜ must be built/configur
 
 ## 8. Legal
 - ⬜ Privacy policy covering quiz data + email use; consent checkbox at email capture
-- ⬜ Cookie consent if EU traffic is allowed (simpler: geo-limit ads to US/CA/AU/UK initially)
+- ⬜ Cookie consent not needed at launch: ads are geo-limited to the US only (also keeps learning data clean)
 - ⬜ Results framed as insight/education — no health, financial, or relationship outcome claims
 
 ## Launch gate

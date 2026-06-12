@@ -57,7 +57,7 @@ Higgsfield's Marketing Studio (2026) supports UGC formats — talking heads, rev
 
 ## 3. Audiences & angles
 
-Primary market is English-speaking (US-led, given the press positioning); the THB ad account is fine for this but billing/budgets will be in baht.
+**Geo targeting: United States only.** One country keeps the learning data clean (one CPM market, one set of CPL benchmarks), and it's where the credibility assets (Fox/NBC/ABC, "university ethics board") carry the most weight. Expand to CA/AU/UK only after US cost per paid member is proven under the $50 target. The THB ad account is fine for this; billing/budgets are just denominated in baht.
 
 | Audience | Angle | Example hook |
 |---|---|---|
